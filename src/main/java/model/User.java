@@ -19,7 +19,7 @@ public class User {
         private String lastName;
         private String firstName;
         private String patronymic;
-        private String snils;
+        private String healthInsurance;
 
         public Builder username(String username) {
             this.username = username;
@@ -42,7 +42,7 @@ public class User {
             return this;
         }
         public Builder snils(String snils) {
-            this.snils = snils;
+            this.healthInsurance = snils;
             return this;
         }
 
@@ -58,7 +58,7 @@ public class User {
         this.lastName = builder.lastName;
         this.firstName = builder.firstName;
         this.patronymic = builder.patronymic;
-        this.snils = builder.snils;
+        this.snils = builder.healthInsurance;
     }
 
     public String getUsername() {
