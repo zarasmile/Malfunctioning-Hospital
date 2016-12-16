@@ -1,4 +1,4 @@
-package dao.impl.jdbc;
+package dao.impl.jdbc.postgres;
 
 import dao.AppointmentDao;
 import model.Appointment;
@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Created by Apraxin Vladimir on 16.12.16.
  */
-public class AppointmentDaoJdbcImpl implements AppointmentDao {
+public class AppointmentDaoJdbcPostgresImpl implements AppointmentDao {
 
     @Override
     public void addAppointment(long id) {

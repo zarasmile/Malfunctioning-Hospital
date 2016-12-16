@@ -1,4 +1,4 @@
-package dao.impl.jdbc;
+package dao.impl.jdbc.postgres;
 
 import dao.UserDao;
 import model.User;
@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Created by Apraxin Vladimir on 16.12.16.
  */
-public class UserDaoJdbcImpl implements UserDao {
+public class UserDaoJdbcPostgresImpl implements UserDao {
 
     @Override
     public void addUser(String username) {

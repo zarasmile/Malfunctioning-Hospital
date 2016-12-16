@@ -1,4 +1,4 @@
-package dao.impl.jdbc;
+package dao.impl.jdbc.postgres;
 
 import dao.SpecialtyDao;
 import model.Specialty;
@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Created by Apraxin Vladimir on 16.12.16.
  */
-public class SpecialtyDaoJdbcImpl implements SpecialtyDao {
+public class SpecialtyDaoJdbcPostgresImpl implements SpecialtyDao {
 
     @Override
     public void addSpecialty(long id) {

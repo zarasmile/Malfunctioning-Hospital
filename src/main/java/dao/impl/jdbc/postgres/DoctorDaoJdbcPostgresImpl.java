@@ -1,4 +1,4 @@
-package dao.impl.jdbc;
+package dao.impl.jdbc.postgres;
 
 import dao.DoctorDao;
 import model.Doctor;
@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Created by Apraxin Vladimir on 16.12.16.
  */
-public class DoctorDaoJdbcImpl implements DoctorDao {
+public class DoctorDaoJdbcPostgresImpl implements DoctorDao {
 
     @Override
     public void addDoctor(long id) {
