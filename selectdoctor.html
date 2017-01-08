@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <title>Republican Children's Clinical Hospital</title>
+    <meta name="keywords" content="children, health, doctors, illness" />
+    <meta name="description" content="Here you can make an appointment with a doctor in Respublican Children's Clinical Hospital"/>
+
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Boogaloo">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Economica:700,400italic">
+
+
+</head>
+<script src="js/jquery.js"></script>
+<body>
+<div id="wrapper">
+    <div class="container">
+        <header>
+            <div class="row">
+
+                <div class="logo span4">
+                    <a class="brand" href="index.html"><img src="/img/choc-logo-2014.png"></a>
+                </div>
+            </div>
+        </header>
+
+
+        <div class="navbar navbar-inverse">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contacts</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">"Make an Appointment - My Kid" </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="login.html">Log in</a></li>
+                                    <li><a href="registration.html">Register</a></li>
+                                    <li><a href="dashboard.html">Dashboard</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <p><h1>Please select a Departament:</h1></p>
+        <form>
+            <a id="btn1" class="large blue awesome">Department of Pediatric</a>
+            <a id="btn2" class="large blue awesome">Department of Surgery</a>
+            <a id="btn3" class="large blue awesome">Department of Infectious Diseases & Immunology</a>
+        </form>
+        <div id="content"></div>
+    </div>
+</div>
+
+
+
+<script>
+    $(document).ready(function(){
+
+        $('#btn1').click(function(){
+            $.ajax({
+                url: "/pediatric.jsp",
+                cache: false,
+                success: function(html){
+                    $("#content").html(html);
+                }
+            });
+        });
+
+        $('#btn2').click(function(){
+            $.ajax({
+                url: "view/2.surgery.jsp",
+                cache: false,
+                success: function(html){
+                    $("#content").html(html);
+                }
+            });
+        });
+
+        $('#btn3').click(function(){
+            $.ajax({
+                url: "3.infections.jsp",
+                cache: false,
+                success: function(html){
+                    $("#content").html(html);
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
